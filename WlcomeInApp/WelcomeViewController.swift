@@ -9,6 +9,9 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    
-
+    @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let loginViewController = segue.source as? LoginViewController else { return }
+        loginViewController.userNameAgent = ""
+        loginViewController.passwordAgent = ""
+    }
 }
