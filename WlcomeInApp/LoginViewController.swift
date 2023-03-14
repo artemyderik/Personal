@@ -17,26 +17,31 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func forgotPasswordButtonTapped() {
+        showForgotPasswordAlert(with: "Oops!", and: "Your password is Password")
+    }
+    @IBAction func forgotUserNameButtonTapped() {
+        showForgotUserNameAlert(with: "Oops!", and: "Your username is User")
+    }
 }
 
-extension UIViewController {
-    private func showForgotUserNameAlert(
+extension LoginViewController {
+     private func showForgotUserNameAlert(
         with title: String?,
         and message: String?
     ) {
-        let alert = UIAlertController(title: "Oops!", message: "Your username is User", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAlert = UIAlertAction(title: "OK", style: .default)
         
         present(alert, animated: true)
         alert.addAction(okAlert)
     }
     
-    private func showForgotPasswordAlert(
+     private func showForgotPasswordAlert(
         with title: String?,
         and message: String?
     ) {
-        let alert = UIAlertController(title: "Oops!", message: "Your password is Password", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAlert = UIAlertAction(title: "OK", style: .default)
         
         present(alert, animated: true)
