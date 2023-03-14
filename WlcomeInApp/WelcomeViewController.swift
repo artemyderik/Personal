@@ -10,22 +10,15 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet var userNameLabelGreeting: UILabel!
-
+    
     var usernameAgent: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       userNameLabelGreeting.text = usernameAgent
+        userNameLabelGreeting.text = usernameAgent
         
     }
     
-    //MARK: unwind
-     @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
-         guard let loginViewController = segue.destination as? LoginViewController else { return }
-         loginViewController.usernameTextField.text = ""
-         loginViewController.passwordTextField.text = ""
-         
-    }
  
     
 

@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
         welcomeViewController.usernameAgent = usernameTextField.text
     }
     
+    //MARK: Buttons methods
+    @IBAction func forgotUserNameButtonTapped() {
+        showAlert(with: "Oops!", and: "Your username is User")
+    }
     @IBAction func forgotPasswordButtonTapped() {
         showAlert(with: "Oops!", and: "Your password is Password")
     }
@@ -26,8 +30,11 @@ class LoginViewController: UIViewController {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
         }
     }
-    @IBAction func forgotUserNameButtonTapped() {
-        showAlert(with: "Oops!", and: "Your username is User")
+
+    //MARK: Unwind method
+    @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
     }
 }
 
@@ -36,7 +43,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-     private func showAlert(
+    private func showAlert(
         with title: String?,
         and message: String?
     ) {
