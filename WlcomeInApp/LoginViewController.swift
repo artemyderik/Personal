@@ -21,6 +21,10 @@ class LoginViewController: UIViewController {
         passwordTextField.text = passwordAgent
     }
     
+  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   //     guard let welcomeViewController = segue.source as? WelcomeViewController else { return }
+    
+    //}
     @IBAction func forgotPasswordButtonTapped() {
         showAlert(with: "Oops!", and: "Your password is Password")
     }
