@@ -8,7 +8,9 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    @IBOutlet var userNameLabelGreeting: UILabel!
+    
     @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
         guard let loginViewController = segue.source as? LoginViewController else { return }
         loginViewController.userNameAgent = ""
