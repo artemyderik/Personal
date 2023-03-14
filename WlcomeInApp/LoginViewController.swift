@@ -9,10 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //MARK: IBOutlets
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
-    
+    //MARK: Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
         welcomeViewController.usernameAgent = usernameTextField.text
