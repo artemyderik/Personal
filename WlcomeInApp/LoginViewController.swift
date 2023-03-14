@@ -25,13 +25,22 @@ extension UIViewController {
         with title: String?,
         and message: String?
     ) {
+        let alert = UIAlertController(title: "Oops!", message: "Your username is User", preferredStyle: .alert)
+        let okAlert = UIAlertAction(title: "OK", style: .default)
         
+        present(alert, animated: true)
+        alert.addAction(okAlert)
     }
     
     private func showForgotPasswordAlert(
         with title: String?,
         and message: String?
     ) {
+        let alert = UIAlertController(title: "Oops!", message: "Your password is Password", preferredStyle: .alert)
+        let okAlert = UIAlertAction(title: "OK", style: .default)
         
+        present(alert, animated: true)
+        alert.addAction(okAlert)
+
     }
 }
