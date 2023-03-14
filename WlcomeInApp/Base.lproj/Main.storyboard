@@ -69,7 +69,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.60146962410000004" green="0.75059768360000001" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.89387565559440563" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="syp-jo-ffr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="051-tr-m9C"/>
                             <constraint firstItem="mpH-yv-mIZ" firstAttribute="top" secondItem="syp-jo-ffr" secondAttribute="bottom" constant="35" id="6aC-2x-MtO"/>
@@ -127,7 +127,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fq5-h9-fyz"/>
-                        <color key="backgroundColor" red="0.60146962410000004" green="0.75059768360000001" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IcG-By-G6n" firstAttribute="centerY" secondItem="noL-Gu-OwR" secondAttribute="centerY" id="8aZ-XX-LXO"/>
                             <constraint firstItem="IcG-By-G6n" firstAttribute="centerX" secondItem="noL-Gu-OwR" secondAttribute="centerX" id="D3M-yp-bfh"/>
