@@ -97,8 +97,20 @@
                     <view key="view" contentMode="scaleToFill" id="noL-Gu-OwR">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcG-By-G6n">
+                                <rect key="frame" x="152.66666666666666" y="376" width="84.666666666666657" height="35"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fq5-h9-fyz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.60146962410000004" green="0.75059768360000001" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IcG-By-G6n" firstAttribute="centerY" secondItem="noL-Gu-OwR" secondAttribute="centerY" id="8aZ-XX-LXO"/>
+                            <constraint firstItem="IcG-By-G6n" firstAttribute="centerX" secondItem="noL-Gu-OwR" secondAttribute="centerX" id="D3M-yp-bfh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jG4-cj-lO0"/>
                 </viewController>
@@ -108,8 +120,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
