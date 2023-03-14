@@ -9,6 +9,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,3 +20,18 @@ class LoginViewController: UIViewController {
 
 }
 
+extension UIViewController {
+    private func showForgotUserNameAlert(
+        with title: String?,
+        and message: String?
+    ) {
+        
+    }
+    
+    private func showForgotPasswordAlert(
+        with title: String?,
+        and message: String?
+    ) {
+        
+    }
+}
