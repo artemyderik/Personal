@@ -81,6 +81,7 @@
                             <constraint firstItem="kZN-1v-Ehj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ztB-RA-I7h"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="As0-eG-IS0"/>
                     <connections>
                         <outlet property="passwordTextField" destination="pkV-gq-GD5" id="y1E-Sf-9cH"/>
                         <outlet property="usernameTextField" destination="AWP-6l-c8K" id="ot9-Rk-FSB"/>
@@ -88,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.46153846153845" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="1067.6923076923076" y="-2.1327014218009479"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="QAJ-wC-4Na">
@@ -99,12 +100,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcG-By-G6n">
-                                <rect key="frame" x="153.66666666666663" y="376.33333333333331" width="84.666666666666629" height="34.333333333333314"/>
+                                <rect key="frame" x="152.66666666666666" y="376.33333333333331" width="84.666666666666657" height="34.333333333333314"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                                 <connections>
-                                    <segue destination="kPI-LC-kV3" kind="unwind" unwindAction="unwindFor:sender:" id="hbR-d7-k8u"/>
+                                    <segue destination="kPI-LC-kV3" kind="unwind" unwindAction="unwindFor:sender:" id="YDq-Ko-pF8"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dby-0O-0Eb">
@@ -134,7 +135,6 @@
                             <constraint firstItem="dby-0O-0Eb" firstAttribute="centerX" secondItem="noL-Gu-OwR" secondAttribute="centerX" id="rYm-bd-QKr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jG4-cj-lO0"/>
                     <connections>
                         <outlet property="userNameLabelGreeting" destination="54e-Aa-WHA" id="QgM-Cw-mDW"/>
                     </connections>
@@ -142,7 +142,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQ3-3A-9Wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kPI-LC-kV3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="848" y="-2"/>
+            <point key="canvasLocation" x="1776.9230769230769" y="-2.1327014218009479"/>
         </scene>
     </scenes>
     <resources>
