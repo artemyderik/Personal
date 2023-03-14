@@ -74,10 +74,10 @@
                             <constraint firstItem="syp-jo-ffr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="051-tr-m9C"/>
                             <constraint firstItem="mpH-yv-mIZ" firstAttribute="top" secondItem="syp-jo-ffr" secondAttribute="bottom" constant="35" id="6aC-2x-MtO"/>
                             <constraint firstItem="syp-jo-ffr" firstAttribute="top" secondItem="kZN-1v-Ehj" secondAttribute="bottom" constant="35" id="IJe-48-9Nf"/>
-                            <constraint firstItem="kZN-1v-Ehj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="271" id="Uql-KR-iF9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpH-yv-mIZ" secondAttribute="trailing" constant="50" id="W2W-Rg-EqG"/>
                             <constraint firstItem="mpH-yv-mIZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="d2M-7W-nvi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kZN-1v-Ehj" secondAttribute="trailing" constant="50" id="jmm-mD-Ebs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kZN-1v-Ehj" secondAttribute="bottom" constant="406" id="xHT-AX-dfu"/>
                             <constraint firstItem="kZN-1v-Ehj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ztB-RA-I7h"/>
                         </constraints>
                     </view>
