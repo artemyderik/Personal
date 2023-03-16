@@ -94,13 +94,13 @@
         <!--Welcome View Controller-->
         <scene sceneID="QAJ-wC-4Na">
             <objects>
-                <viewController id="v3M-cg-02Y" customClass="WelcomeViewController" customModule="WlcomeInApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="v3M-cg-02Y" customClass="WelcomeViewController" customModule="WlcomeInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="noL-Gu-OwR">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcG-By-G6n">
-                                <rect key="frame" x="152.66666666666666" y="376.33333333333331" width="84.666666666666657" height="34.333333333333314"/>
+                                <rect key="frame" x="152.66666666666666" y="405" width="84.666666666666657" height="34.333333333333314"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
