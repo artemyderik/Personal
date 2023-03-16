@@ -18,15 +18,4 @@ class WelcomeViewController: UIViewController {
         userNameLabelGreeting.text = usernameAgent
         
     }
-    
- 
-    
-
-
-        
-    /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loginViewController = segue.source as? LoginViewController else { return }
-        userNameLabelGreeting.text = loginViewController.usernameTextField.text
-    }
-    */
 }

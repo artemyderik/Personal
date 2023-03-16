@@ -27,8 +27,9 @@ class LoginViewController: UIViewController {
         showAlert(with: "Oops!", and: "Your password is Password")
     }
     @IBAction func logInButtonTapped() {
-        if usernameTextField.text != "User" || passwordTextField.text != "Password" {
+        guard usernameTextField.text == "User", passwordTextField.text == "Password" else {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
+            return
         }
     }
 
@@ -44,10 +45,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-    private func showAlert(
-        with title: String?,
-        and message: String?
-    ) {
+    private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(
             title: title,
             message: message,
@@ -58,5 +56,4 @@ extension LoginViewController {
         present(alert, animated: true)
         alert.addAction(okAlert)
     }
-    
 }
