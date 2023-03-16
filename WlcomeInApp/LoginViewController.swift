@@ -21,6 +21,11 @@ final class LoginViewController: UIViewController {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
         welcomeViewController.usernameAgent = usernameTextField.text
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
     
     //MARK: Buttons methods
     @IBAction func forgotUserNameButtonTapped() {
