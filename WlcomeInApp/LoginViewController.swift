@@ -8,10 +8,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     //MARK: IBOutlets
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    
+    private var user = "User"
+    private var password = "Password"
 
     //MARK: Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -21,13 +24,13 @@ class LoginViewController: UIViewController {
     
     //MARK: Buttons methods
     @IBAction func forgotUserNameButtonTapped() {
-        showAlert(with: "Oops!", and: "Your username is User")
+        showAlert(with: "Oops!", and: "Your username is \(user)")
     }
     @IBAction func forgotPasswordButtonTapped() {
-        showAlert(with: "Oops!", and: "Your password is Password")
+        showAlert(with: "Oops!", and: "Your password is \(password)")
     }
     @IBAction func logInButtonTapped() {
-        guard usernameTextField.text == "User", passwordTextField.text == "Password" else {
+        guard usernameTextField.text == user, passwordTextField.text == password else {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
             return
         }
