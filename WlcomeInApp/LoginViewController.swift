@@ -30,9 +30,11 @@ final class LoginViewController: UIViewController {
     //MARK: Buttons methods
     @IBAction func forgotUserNameButtonTapped() {
         showAlert(with: "Oops!", and: "Your username is \(user)")
+       usernameTextField.text = ""
     }
     @IBAction func forgotPasswordButtonTapped() {
         showAlert(with: "Oops!", and: "Your password is \(password)")
+       passwordTextField.text = ""
     }
     @IBAction func logInButtonTapped() {
         guard usernameTextField.text == user, passwordTextField.text == password else {
@@ -40,6 +42,7 @@ final class LoginViewController: UIViewController {
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password"
             )
+            passwordTextField.text = ""
             return
         }
     }
