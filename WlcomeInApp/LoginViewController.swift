@@ -21,7 +21,7 @@ final class LoginViewController: UIViewController {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
         welcomeViewController.usernameAgent = usernameTextField.text
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -36,7 +36,10 @@ final class LoginViewController: UIViewController {
     }
     @IBAction func logInButtonTapped() {
         guard usernameTextField.text == user, passwordTextField.text == password else {
-            showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
+            showAlert(
+                with: "Invalid login or password",
+                and: "Please, enter correct login and password"
+            )
             return
         }
     }
