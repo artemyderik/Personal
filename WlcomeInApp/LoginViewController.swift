@@ -29,20 +29,18 @@ final class LoginViewController: UIViewController {
     
     //MARK: Buttons methods
     @IBAction func forgotUserNameButtonTapped() {
-        showAlert(with: "Oops!", and: "Your username is \(user)")
-       usernameTextField.text = ""
+        showAlert(with: "Oops!", and: "Your username is \(user)", textField: usernameTextField)
     }
     @IBAction func forgotPasswordButtonTapped() {
-        showAlert(with: "Oops!", and: "Your password is \(password)")
-       passwordTextField.text = ""
+        showAlert(with: "Oops!", and: "Your password is \(password)", textField: passwordTextField)
     }
     @IBAction func logInButtonTapped() {
         guard usernameTextField.text == user, passwordTextField.text == password else {
             showAlert(
                 with: "Invalid login or password",
-                and: "Please, enter correct login and password"
+                and: "Please, enter correct login and password",
+                textField: passwordTextField
             )
-            passwordTextField.text = ""
             return
         }
     }
@@ -59,13 +57,15 @@ final class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-    private func showAlert(with title: String, and message: String) {
+    private func showAlert(with title: String, and message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
-        let okAlert = UIAlertAction(title: "OK", style: .default)
+        let okAlert = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         
         present(alert, animated: true)
         alert.addAction(okAlert)
