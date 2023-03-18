@@ -9,6 +9,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    //MARK: IB Outlets
     @IBOutlet var userNameLabelGreeting: UILabel!
     
     var usernameAgent: String!
