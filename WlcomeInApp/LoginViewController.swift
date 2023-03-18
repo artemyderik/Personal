@@ -14,7 +14,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
 
     //MARK: Public Properties
-    private var user = "1"
+    private var user = "User"
     private var password = "1"
 
     //MARK: Override Methods
@@ -25,6 +25,8 @@ final class LoginViewController: UIViewController {
         viewControllers.forEach { viewController in
             if let welcomeViewController = viewController as? WelcomeViewController {
                 welcomeViewController.usernameAgent = user
+            } else if viewController is UINavigationController {
+                viewController.title = "About \(user)"
             }
         }
     }
