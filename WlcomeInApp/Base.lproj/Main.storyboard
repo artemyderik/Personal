@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcG-By-G6n">
-                                <rect key="frame" x="152.66666666666666" y="405" width="84.666666666666657" height="34.333333333333314"/>
+                                <rect key="frame" x="152.66666666666666" y="707.66666666666663" width="84.666666666666657" height="34.333333333333371"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
@@ -125,12 +125,19 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwt-bZ-IgW">
+                                <rect key="frame" x="148.66666666666666" y="405" width="92.666666666666657" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fq5-h9-fyz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IcG-By-G6n" firstAttribute="centerY" secondItem="noL-Gu-OwR" secondAttribute="centerY" id="8aZ-XX-LXO"/>
+                            <constraint firstItem="fq5-h9-fyz" firstAttribute="bottom" secondItem="IcG-By-G6n" secondAttribute="bottom" constant="68" id="2eV-jc-Oez"/>
                             <constraint firstItem="IcG-By-G6n" firstAttribute="centerX" secondItem="noL-Gu-OwR" secondAttribute="centerX" id="D3M-yp-bfh"/>
+                            <constraint firstItem="lwt-bZ-IgW" firstAttribute="centerX" secondItem="noL-Gu-OwR" secondAttribute="centerX" id="PFj-8u-n9n"/>
+                            <constraint firstItem="lwt-bZ-IgW" firstAttribute="centerY" secondItem="noL-Gu-OwR" secondAttribute="centerY" id="TWD-tC-chT"/>
                             <constraint firstItem="dby-0O-0Eb" firstAttribute="top" secondItem="fq5-h9-fyz" secondAttribute="top" constant="68" id="VAP-Ja-7Dc"/>
                             <constraint firstItem="dby-0O-0Eb" firstAttribute="centerX" secondItem="noL-Gu-OwR" secondAttribute="centerX" id="rYm-bd-QKr"/>
                         </constraints>
@@ -144,8 +151,78 @@
             </objects>
             <point key="canvasLocation" x="1776.9230769230769" y="-2.1327014218009479"/>
         </scene>
+        <!--First-->
+        <scene sceneID="sqC-HQ-AoE">
+            <objects>
+                <viewController title="First" id="xCM-H4-vog" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x1J-1Y-o8S">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GFD-JF-eQ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="nyn-Ks-KJk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOC-1v-cn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="792"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="46l-wL-2gK">
+            <objects>
+                <viewController title="Second" id="uej-G4-fNn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XyN-23-b93">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yyS-qy-V2I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="8QJ-Uv-u6X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKi-n9-hPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555" y="792"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="2Rw-se-613">
+            <objects>
+                <viewController title="Third" id="MZA-Za-B4Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TmP-JQ-gUL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2fS-Dn-o1f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CAj-iV-z1d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1K-MF-5YA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="792"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1VM-1N-ovd">
+            <objects>
+                <tabBarController id="aFL-p4-2Lb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICP-vN-t4M">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uej-G4-fNn" kind="relationship" relationship="viewControllers" id="3xS-1S-cTo"/>
+                        <segue destination="xCM-H4-vog" kind="relationship" relationship="viewControllers" id="XqM-Hg-bhi"/>
+                        <segue destination="MZA-Za-B4Z" kind="relationship" relationship="viewControllers" id="eaC-rm-TGw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MH8-X7-Xyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556" y="16"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
