@@ -9,14 +9,15 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    //MARK: IBOutlets
+    //MARK: IB Outlets
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
+
+    //MARK: Public Properties
     private var user = "User"
     private var password = "Password"
 
-    //MARK: Override methods
+    //MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
         welcomeViewController.usernameAgent = usernameTextField.text
