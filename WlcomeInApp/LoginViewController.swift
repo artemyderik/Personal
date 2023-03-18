@@ -14,8 +14,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
 
     //MARK: Public Properties
-    private var user = "User"
-    private var password = "Password"
+    private var user = "1"
+    private var password = "1"
 
     //MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
