@@ -143,19 +143,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQ3-3A-9Wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kPI-LC-kV3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2629" y="-2"/>
+            <point key="canvasLocation" x="1425" y="818"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="PYv-3z-J0x">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="vxl-z5-h0m" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="vxl-z5-h0m" customClass="InfoViewController" customModule="WlcomeInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NqL-cE-PEF">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaV-RE-9Wn">
-                                <rect key="frame" x="147" y="595" width="96" height="34.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaV-RE-9Wn">
+                                <rect key="frame" x="147" y="658.66666666666663" width="96" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="More info"/>
                                 <connections>
@@ -165,17 +164,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3In-Bo-FlL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3In-Bo-FlL" firstAttribute="bottom" secondItem="HaV-RE-9Wn" secondAttribute="bottom" constant="68" id="l2o-cx-AKD"/>
+                            <constraint firstItem="HaV-RE-9Wn" firstAttribute="centerX" secondItem="NqL-cE-PEF" secondAttribute="centerX" id="sP0-zs-soy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6RS-Mb-Tea"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfC-bg-LNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3556.9230769230767" y="735.78199052132697"/>
+            <point key="canvasLocation" x="2148" y="1565"/>
         </scene>
-        <!--View Controller-->
+        <!--More About View Controller-->
         <scene sceneID="eBr-Hz-mBT">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DNZ-QT-wYo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DNZ-QT-wYo" customClass="MoreAboutViewController" customModule="WlcomeInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YaT-Ta-Xf8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2Y-Fd-C2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4626" y="736"/>
+            <point key="canvasLocation" x="2880" y="1565"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oC1-PN-Ahy">
@@ -195,6 +198,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ucB-Ir-kha"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tJd-9C-tIW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -224,7 +228,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDy-gT-h5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2627.6923076923076" y="735.78199052132697"/>
+            <point key="canvasLocation" x="2148" y="818"/>
         </scene>
     </scenes>
     <resources>
