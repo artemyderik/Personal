@@ -22,19 +22,28 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     @IBOutlet var alphaSlider: UISlider!
-
     
-
+    private var redAgent: Float = 0
+    private var greenAgent: Float = 0
+    private var blueAgent: Float = 0
+    private var alphaAgent: Float = 0
+    
     //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorisedView.layer.cornerRadius = colorisedView.frame.width / 15.5
         slidersSetup()
         toColorTheView()
+        agentsSetup()
     }
     
     
     //MARK: IB Actions
+    @IBAction func setButtonPressed() {
+        agentsSetup()
+        view.backgroundColor = UIColor(red: CGFloat(redAgent), green: CGFloat(greenAgent), blue: CGFloat(blueAgent), alpha: CGFloat(alphaAgent))
+    }
+    
     @IBAction func redSpectorChanges() {
         redSliderValue.text = String(format: "%.2f", redSlider.value)
         toColorTheView()
@@ -50,17 +59,8 @@ class SettingsViewController: UIViewController {
         toColorTheView()
     }
     @IBAction func alphaSpectorChanges() {
-        alphaSliderValue.text = String(format: "%.2f", blueSlider.value)
+        alphaSliderValue.text = String(format: "%.2f", alphaSlider.value)
         toColorTheView()
-    }
-
-    
-    
-    //MARK: Unwind
-    @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
-       guard let tabBarController = segue.source as? TabBarController else { return }
-        //tabBarController.
-           // tabBar.backgroundColor = UIColor(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value, alpha: 1)
     }
 
     
@@ -69,6 +69,7 @@ class SettingsViewController: UIViewController {
         redSlider.minimumTrackTintColor = UIColor.red
         greenSlider.minimumTrackTintColor = UIColor.green
         blueSlider.minimumTrackTintColor = UIColor.blue
+        alphaSlider.minimumTrackTintColor = UIColor.lightGray
     }
     
     private func toColorTheView() {
@@ -78,6 +79,13 @@ class SettingsViewController: UIViewController {
             blue: CGFloat(blueSlider.value),
             alpha: CGFloat(alphaSlider.value)
         )
+    }
+    
+    private func agentsSetup() {
+        redAgent = redSlider.value
+        greenAgent = greenSlider.value
+        blueAgent = blueSlider.value
+        alphaAgent = alphaSlider.value
     }
 
 }
