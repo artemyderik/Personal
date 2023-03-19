@@ -9,6 +9,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    
+    //MARK: IB Outlets
     @IBOutlet var colorisedView: UIView!
     
     @IBOutlet var greenSliderValue: UILabel!
@@ -18,7 +20,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+    
 
+    //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorisedView.layer.cornerRadius = colorisedView.frame.width / 15.5
@@ -26,6 +30,8 @@ class SettingsViewController: UIViewController {
         toColorTheView()
     }
     
+    
+    //MARK: IB Actions
     @IBAction func redSpectorChanges() {
         redSliderValue.text = String(format: "%.2f", redSlider.value)
         toColorTheView()
@@ -42,7 +48,8 @@ class SettingsViewController: UIViewController {
     }
     
     
-     func unwind(for segue: UIStoryboardSegue, sender: Any?) {
+    //MARK: Unwind
+    @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
        guard let tabBarController = segue.source as? TabBarController else { return }
     }
 
