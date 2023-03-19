@@ -353,6 +353,9 @@
                                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="allWhiteVuttonPressed" destination="x7t-Ym-wtT" eventType="touchUpInside" id="rMk-fm-gFX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76v-Eh-eZH">
                                 <rect key="frame" x="265" y="635" width="89" height="35"/>
@@ -364,6 +367,9 @@
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="allBlackButtonPressed" destination="x7t-Ym-wtT" eventType="touchUpInside" id="iGw-zh-cq4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UM8-Cz-j0a"/>

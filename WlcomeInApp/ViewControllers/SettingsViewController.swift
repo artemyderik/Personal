@@ -44,6 +44,15 @@ class SettingsViewController: UIViewController {
         view.backgroundColor = UIColor(red: CGFloat(redAgent), green: CGFloat(greenAgent), blue: CGFloat(blueAgent), alpha: CGFloat(alphaAgent))
     }
     
+    
+    @IBAction func allBlackButtonPressed() {
+    }
+    
+    @IBAction func allWhiteVuttonPressed() {
+    }
+
+
+
     @IBAction func redSpectorChanges() {
         redSliderValue.text = String(format: "%.2f", redSlider.value)
         toColorTheView()
@@ -89,4 +98,5 @@ class SettingsViewController: UIViewController {
     }
 
 }
+
 
