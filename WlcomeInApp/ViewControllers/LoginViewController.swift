@@ -13,10 +13,13 @@ final class LoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
-    //MARK: Public Properties
-    private var user = "User"
-    private var password = "1"
-
+  
+     /* let user = "User"
+     let password = "1"
+     */
+    
+    let user = User.init(login: "User", password: "1", person: Person(name: "Artemy", surname: "Derik"))
+    
     //MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
@@ -24,9 +27,9 @@ final class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeViewController = viewController as? WelcomeViewController {
-                welcomeViewController.usernameAgent = user
+                welcomeViewController.usernameAgent = user.person.name
             } else if viewController is UINavigationController {
-                viewController.title = "About \(user)"
+                viewController.title = "About \(user.person.name)"
             }
         }
     }
@@ -38,13 +41,13 @@ final class LoginViewController: UIViewController {
     
     //MARK: Buttons methods
     @IBAction func forgotUserNameButtonTapped() {
-        showAlert(with: "Oops!", and: "Your username is \(user)", textField: usernameTextField)
+        showAlert(with: "Oops!", and: "Your username is \(user.login)", textField: usernameTextField)
     }
     @IBAction func forgotPasswordButtonTapped() {
-        showAlert(with: "Oops!", and: "Your password is \(password)", textField: passwordTextField)
+        showAlert(with: "Oops!", and: "Your password is \(user.password)", textField: passwordTextField)
     }
     @IBAction func logInButtonTapped() {
-        guard usernameTextField.text == user, passwordTextField.text == password else {
+        guard usernameTextField.text == user.login, passwordTextField.text == user.password else {
             showAlert(
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password",
