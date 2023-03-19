@@ -272,22 +272,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="o0H-AP-SCG">
-                                <rect key="frame" x="90" y="214" width="284" height="126"/>
+                                <rect key="frame" x="105" y="214" width="269" height="126"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SJb-RS-zsp">
-                                        <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="273" height="31"/>
                                         <connections>
                                             <action selector="redSpectorChanges" destination="x7t-Ym-wtT" eventType="valueChanged" id="gI2-29-rmP"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0p8-E1-eR0">
-                                        <rect key="frame" x="-2" y="48" width="288" height="31"/>
+                                        <rect key="frame" x="-2" y="48" width="273" height="31"/>
                                         <connections>
                                             <action selector="greenSpectorChanges" destination="x7t-Ym-wtT" eventType="valueChanged" id="4ch-4z-ieW"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-aK-RmJ">
-                                        <rect key="frame" x="-2" y="96" width="288" height="31"/>
+                                        <rect key="frame" x="-2" y="96" width="273" height="31"/>
                                         <connections>
                                             <action selector="blueSpectorChanges" destination="x7t-Ym-wtT" eventType="valueChanged" id="TMU-9z-sqm"/>
                                         </connections>
@@ -295,22 +295,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="gri-kh-lfH">
-                                <rect key="frame" x="57.000000000000007" y="221" width="21.333333333333336" height="119"/>
+                                <rect key="frame" x="56.999999999999993" y="221" width="31.666666666666664" height="119"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycq-Qb-FYD">
-                                        <rect key="frame" x="0.0" y="0.0" width="21.333333333333332" height="20.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycq-Qb-FYD">
+                                        <rect key="frame" x="0.0" y="0.0" width="31.666666666666668" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnc-2d-Kmh">
-                                        <rect key="frame" x="0.0" y="49.333333333333314" width="21.333333333333332" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnc-2d-Kmh">
+                                        <rect key="frame" x="0.0" y="49.333333333333314" width="31.666666666666668" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-7m-DCf">
-                                        <rect key="frame" x="0.0" y="98.666666666666686" width="21.333333333333332" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-7m-DCf">
+                                        <rect key="frame" x="0.0" y="98.666666666666686" width="31.666666666666668" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -327,7 +327,7 @@
                             <constraint firstItem="j8y-Jz-NhJ" firstAttribute="top" secondItem="UM8-Cz-j0a" secondAttribute="top" constant="221" id="N6H-CS-xkN"/>
                             <constraint firstItem="o0H-AP-SCG" firstAttribute="top" secondItem="UM8-Cz-j0a" secondAttribute="top" constant="214" id="Pkn-D4-js0"/>
                             <constraint firstItem="Xi8-sg-XyV" firstAttribute="top" secondItem="UM8-Cz-j0a" secondAttribute="top" constant="49" id="UFZ-bl-hF7"/>
-                            <constraint firstItem="o0H-AP-SCG" firstAttribute="leading" secondItem="UM8-Cz-j0a" secondAttribute="leading" constant="90" id="Z18-jR-dsT"/>
+                            <constraint firstItem="o0H-AP-SCG" firstAttribute="leading" secondItem="UM8-Cz-j0a" secondAttribute="leading" constant="105" id="Z18-jR-dsT"/>
                             <constraint firstItem="UM8-Cz-j0a" firstAttribute="trailing" secondItem="Xi8-sg-XyV" secondAttribute="trailing" constant="16" id="brp-JT-pj8"/>
                             <constraint firstItem="Xi8-sg-XyV" firstAttribute="leading" secondItem="UM8-Cz-j0a" secondAttribute="leading" constant="16" id="lwe-7T-fEZ"/>
                             <constraint firstItem="gri-kh-lfH" firstAttribute="top" secondItem="UM8-Cz-j0a" secondAttribute="top" constant="221" id="s85-II-yaB"/>
