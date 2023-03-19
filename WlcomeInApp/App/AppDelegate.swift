@@ -10,10 +10,14 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    //СДЕЛАТЬ КНОПКУ ОБНУЛЕНИЯ В ЧЕРНЫЙ И В БЕЛЫЙ (УСТАНОВИТЬ ЗНАЧЕНИЯ НА 0 И 1) и добавиьть алерт
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UITabBar.appearance().tintColor = UIColor(red: 0.18, green: 0.5, blue: 1, alpha: 1)
+        UITabBar.appearance().unselectedItemTintColor = UIColor(red: 0.18, green: 0.5, blue: 1, alpha: 0.7)
         return true
     }
 

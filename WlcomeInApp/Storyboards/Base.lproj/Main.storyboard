@@ -300,6 +300,9 @@
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fh1-xb-App">
                                         <rect key="frame" x="-2" y="144" width="273" height="31"/>
+                                        <connections>
+                                            <action selector="alphaSpectorChanges" destination="x7t-Ym-wtT" eventType="valueChanged" id="Yzf-Xb-pLM"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -332,9 +335,39 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYw-NJ-Xhw">
+                                <rect key="frame" x="170.33333333333334" y="635.66666666666663" width="49.666666666666657" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Set"/>
+                                <connections>
+                                    <action selector="setButtonPressed" destination="x7t-Ym-wtT" eventType="touchUpInside" id="yWl-YH-41D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqQ-Dh-Pdh">
+                                <rect key="frame" x="38" y="635" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="All White">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76v-Eh-eZH">
+                                <rect key="frame" x="265" y="635" width="89" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="All Black">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UM8-Cz-j0a"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UM8-Cz-j0a" firstAttribute="trailing" secondItem="o0H-AP-SCG" secondAttribute="trailing" constant="16" id="3Vk-vf-BMK"/>
                             <constraint firstItem="gri-kh-lfH" firstAttribute="leading" secondItem="j8y-Jz-NhJ" secondAttribute="trailing" constant="19.670000000000002" id="Gbv-O5-Pf1"/>
@@ -344,13 +377,17 @@
                             <constraint firstItem="Xi8-sg-XyV" firstAttribute="top" secondItem="UM8-Cz-j0a" secondAttribute="top" constant="49" id="UFZ-bl-hF7"/>
                             <constraint firstItem="o0H-AP-SCG" firstAttribute="leading" secondItem="UM8-Cz-j0a" secondAttribute="leading" constant="105" id="Z18-jR-dsT"/>
                             <constraint firstItem="UM8-Cz-j0a" firstAttribute="trailing" secondItem="Xi8-sg-XyV" secondAttribute="trailing" constant="16" id="brp-JT-pj8"/>
+                            <constraint firstItem="UM8-Cz-j0a" firstAttribute="bottom" secondItem="JYw-NJ-Xhw" secondAttribute="bottom" constant="68" id="ik1-d4-5ai"/>
                             <constraint firstItem="Xi8-sg-XyV" firstAttribute="leading" secondItem="UM8-Cz-j0a" secondAttribute="leading" constant="16" id="lwe-7T-fEZ"/>
                             <constraint firstItem="gri-kh-lfH" firstAttribute="top" secondItem="UM8-Cz-j0a" secondAttribute="top" constant="221" id="s85-II-yaB"/>
+                            <constraint firstItem="JYw-NJ-Xhw" firstAttribute="centerX" secondItem="CAk-0T-pV3" secondAttribute="centerX" id="sco-R2-Ucp"/>
                             <constraint firstItem="o0H-AP-SCG" firstAttribute="top" secondItem="Xi8-sg-XyV" secondAttribute="bottom" constant="40" id="wYk-6h-rPE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="kDj-og-qNA"/>
                     <connections>
+                        <outlet property="alphaSlider" destination="fh1-xb-App" id="GK3-wo-PoS"/>
+                        <outlet property="alphaSliderValue" destination="SFH-WO-RbQ" id="Nr2-2n-ERW"/>
                         <outlet property="blueSlider" destination="9Et-aK-RmJ" id="aEO-a0-fnO"/>
                         <outlet property="blueSliderValue" destination="NcY-7m-DCf" id="hp0-WR-cPZ"/>
                         <outlet property="colorisedView" destination="Xi8-sg-XyV" id="MKG-X5-EeG"/>
@@ -369,11 +406,17 @@
         <image name="1.circle.fill" catalog="system" width="128" height="123"/>
         <image name="2.circle.fill" catalog="system" width="128" height="123"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
-        <systemColor name="systemBackgroundColor">
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
