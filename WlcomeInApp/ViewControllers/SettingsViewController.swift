@@ -16,10 +16,13 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenSliderValue: UILabel!
     @IBOutlet var redSliderValue: UILabel!
     @IBOutlet var blueSliderValue: UILabel!
+    @IBOutlet var alphaSliderValue: UILabel!
 
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+    @IBOutlet var alphaSlider: UISlider!
+
     
 
     //MARK: Override Methods
@@ -46,11 +49,18 @@ class SettingsViewController: UIViewController {
         blueSliderValue.text = String(format: "%.2f", blueSlider.value)
         toColorTheView()
     }
+    @IBAction func alphaSpectorChanges() {
+        alphaSliderValue.text = String(format: "%.2f", blueSlider.value)
+        toColorTheView()
+    }
+
     
     
     //MARK: Unwind
     @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
        guard let tabBarController = segue.source as? TabBarController else { return }
+        //tabBarController.
+           // tabBar.backgroundColor = UIColor(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value, alpha: 1)
     }
 
     
@@ -66,7 +76,7 @@ class SettingsViewController: UIViewController {
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
-            alpha: 1
+            alpha: CGFloat(alphaSlider.value)
         )
     }
 
