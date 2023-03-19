@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		946F4A8529C6F8DB00F4DF66 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F4A8429C6F8DB00F4DF66 /* UserIdentity.swift */; };
 		94DD407929C5AF82000CDD03 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD407829C5AF82000CDD03 /* InfoViewController.swift */; };
 		94DD407B29C5B036000CDD03 /* MoreAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD407A29C5B036000CDD03 /* MoreAboutViewController.swift */; };
 		94FC372729C0087100746475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC372629C0087100746475 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		946F4A8429C6F8DB00F4DF66 /* UserIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentity.swift; sourceTree = "<group>"; };
 		94DD407829C5AF82000CDD03 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		94DD407A29C5B036000CDD03 /* MoreAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutViewController.swift; sourceTree = "<group>"; };
 		94FC372329C0087100746475 /* WlcomeInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WlcomeInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 		946F4A8329C6F77D00F4DF66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				946F4A8429C6F8DB00F4DF66 /* UserIdentity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946F4A8529C6F8DB00F4DF66 /* UserIdentity.swift in Sources */,
 				94FC372B29C0087100746475 /* LoginViewController.swift in Sources */,
 				94DD407B29C5B036000CDD03 /* MoreAboutViewController.swift in Sources */,
 				94FC373B29C008C000746475 /* WelcomeViewController.swift in Sources */,
