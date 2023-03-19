@@ -11,6 +11,10 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        tabBar.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+    }
+    
+    private func generateTabBar() {
+        viewControllers = []
     }
 }
