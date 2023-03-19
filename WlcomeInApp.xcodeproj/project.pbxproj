@@ -80,6 +80,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		946F4A8329C6F77D00F4DF66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		94FC371A29C0087100746475 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +106,7 @@
 		94FC372529C0087100746475 /* WlcomeInApp */ = {
 			isa = PBXGroup;
 			children = (
+				946F4A8329C6F77D00F4DF66 /* Models */,
 				94FC373429C0087200746475 /* Info.plist */,
 				9457165D29C5FFB600D97F8F /* ViewControllers */,
 				9457165E29C6008F00D97F8F /* Storyboards */,
