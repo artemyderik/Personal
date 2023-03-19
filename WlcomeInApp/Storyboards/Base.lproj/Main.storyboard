@@ -276,12 +276,21 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SJb-RS-zsp">
                                         <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
+                                        <connections>
+                                            <action selector="redSpectorChanges" destination="x7t-Ym-wtT" eventType="valueChanged" id="gI2-29-rmP"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0p8-E1-eR0">
                                         <rect key="frame" x="-2" y="48" width="288" height="31"/>
+                                        <connections>
+                                            <action selector="greenSpectorChanges" destination="x7t-Ym-wtT" eventType="valueChanged" id="4ch-4z-ieW"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-aK-RmJ">
                                         <rect key="frame" x="-2" y="96" width="288" height="31"/>
+                                        <connections>
+                                            <action selector="blueSpectorChanges" destination="x7t-Ym-wtT" eventType="valueChanged" id="TMU-9z-sqm"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -326,6 +335,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="kDj-og-qNA"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="9Et-aK-RmJ" id="aEO-a0-fnO"/>
+                        <outlet property="blueSliderValue" destination="NcY-7m-DCf" id="hp0-WR-cPZ"/>
+                        <outlet property="colorisedView" destination="Xi8-sg-XyV" id="MKG-X5-EeG"/>
+                        <outlet property="greenSlider" destination="0p8-E1-eR0" id="6hN-0v-Wun"/>
+                        <outlet property="greenSliderValue" destination="mnc-2d-Kmh" id="ITD-as-Uov"/>
+                        <outlet property="redSlider" destination="SJb-RS-zsp" id="EUI-W1-dcr"/>
+                        <outlet property="redSliderValue" destination="Ycq-Qb-FYD" id="dsB-p9-Izc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvR-1P-RL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
