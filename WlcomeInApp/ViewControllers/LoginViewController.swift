@@ -9,16 +9,13 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    //MARK: IB Outlets
+    //MARK: - IB Outlets
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-
-  
-     /* let user = "User"
-     let password = "1"
-     */
     
+    //MARK: - Properties
     let user = User.init(login: "User", password: "1", person: Person(name: "Artemy", surname: "Derik"))
+    
     
     //MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,14 +27,19 @@ final class LoginViewController: UIViewController {
                 welcomeViewController.usernameAgent = user.person.name
             } else if viewController is UINavigationController {
                 viewController.title = "About \(user.person.name)"
+            } else if let settingsViewController = viewController as? SettingsViewController {
+                settingsViewController.showAlert(with: "Hi!", and: "Set the view in any color you want and press the Set button to paint the background")
             }
         }
     }
     
+    
+    //MARK: - Override Methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
+    
     
     //MARK: Buttons methods
     @IBAction func forgotUserNameButtonTapped() {
@@ -66,7 +68,6 @@ final class LoginViewController: UIViewController {
 
 
 //MARK: Alert method
-
 extension LoginViewController {
     
     private func showAlert(with title: String, and message: String, textField: UITextField? = nil) {
