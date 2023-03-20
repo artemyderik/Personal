@@ -10,7 +10,7 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     
-    //MARK: IB Outlets
+    //MARK: - IB Outlets
     @IBOutlet var colorisedView: UIView!
     
     @IBOutlet var greenSliderValue: UILabel!
@@ -23,7 +23,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     @IBOutlet var alphaSlider: UISlider!
     
-    //MARK: Override Methods
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorisedView.layer.cornerRadius = colorisedView.frame.width / 15.5
@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
     }
     
     
-    //MARK: IB Actions
+    //MARK: - IB Actions
     @IBAction func setButtonPressed() {
         toColorTheSuperView()
     }
@@ -71,6 +71,20 @@ class SettingsViewController: UIViewController {
     @IBAction func alphaSpectorChanges() {
         alphaSliderValue.text = String(format: "%.2f", alphaSlider.value)
         toColorTheColorisedView()
+    }
+    
+    
+    //MARK: - Methods
+    func showAlert(with title: String, and message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAlert = UIAlertAction(title: "OK", style: .default)
+        
+        present(alert, animated: true)
+        alert.addAction(okAlert)
     }
 
     
