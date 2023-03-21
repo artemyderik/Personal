@@ -13,6 +13,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    
     //MARK: - Properties
     let user = User.init(login: "User", password: "1", person: Person(name: "Artemy", surname: "Derik", infoAbout: "Привет! Меня зовут Тёма, я творческий человек. Мне нравится создавть. \n  Приятное ощущение, когда ничего не было, ты что-то придумал, и оно появилось. Вот за таким чувством я несколько лет назад пошел в видеопроизводство. С 14 лет снимал, придумывал, режиссировал. Сейчас мне 21 и я подостыл к этому ремеслу. Последнее время занимался дизйном, а прошлым летом разработал меню и готовил его в крутом автобусе в центре Академгородка в Новосибирске!\n  Корндоги можно посмотреть в инсте по адресу @bazabunclan, а некоторые дизайн-работы тыкнув на кнопку See pictures"))
     
@@ -43,7 +44,7 @@ final class LoginViewController: UIViewController {
     }
     
     
-    //MARK: Buttons methods
+    //MARK: IB Actions
     @IBAction func forgotUserNameButtonTapped() {
         showAlert(with: "Oops!", and: "Your username is \(user.login)", textField: usernameTextField)
     }
@@ -61,7 +62,8 @@ final class LoginViewController: UIViewController {
         }
     }
 
-    //MARK: Unwind method
+    
+//MARK: Unwind method
     @IBAction func unwind(for segue: UIStoryboardSegue, sender: Any?) {
         usernameTextField.text = ""
         passwordTextField.text = ""

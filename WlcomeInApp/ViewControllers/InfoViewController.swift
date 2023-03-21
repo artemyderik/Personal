@@ -9,10 +9,16 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    
+//MARK: IB Outlest
     @IBOutlet var infoAbout: UILabel!
     
+    
+//MARK: Properties
     var user: User!
     
+    
+//MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "\(user.person.name) \(user.person.surname)"
@@ -23,5 +29,4 @@ class InfoViewController: UIViewController {
         guard let moreAboutVC = segue.destination as? MoreAboutViewController else { return }
         moreAboutVC.user = user
     }
-
 }
