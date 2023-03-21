@@ -165,7 +165,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt5-B1-aWI">
-                                <rect key="frame" x="16" y="412" width="358" height="20.333333333333314"/>
+                                <rect key="frame" x="16" y="590" width="358" height="20.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="358" id="oJW-m2-AAk"/>
                                 </constraints>
@@ -177,7 +177,7 @@
                         <viewLayoutGuide key="safeArea" id="3In-Bo-FlL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kt5-B1-aWI" firstAttribute="centerY" secondItem="NqL-cE-PEF" secondAttribute="centerY" id="7QU-KF-Viy"/>
+                            <constraint firstItem="HaV-RE-9Wn" firstAttribute="top" secondItem="kt5-B1-aWI" secondAttribute="bottom" constant="48.329999999999998" id="HMf-fo-jPz"/>
                             <constraint firstItem="kt5-B1-aWI" firstAttribute="leading" secondItem="3In-Bo-FlL" secondAttribute="leading" constant="16" id="KWh-ej-p0V"/>
                             <constraint firstItem="3In-Bo-FlL" firstAttribute="trailing" secondItem="kt5-B1-aWI" secondAttribute="trailing" constant="16" id="hgc-ub-3Gr"/>
                             <constraint firstItem="3In-Bo-FlL" firstAttribute="bottom" secondItem="HaV-RE-9Wn" secondAttribute="bottom" constant="68" id="l2o-cx-AKD"/>
