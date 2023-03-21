@@ -157,17 +157,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaV-RE-9Wn">
-                                <rect key="frame" x="135.33333333333334" y="658.66666666666663" width="119.33333333333334" height="34.333333333333371"/>
+                                <rect key="frame" x="135.66666666666666" y="658.66666666666663" width="119" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="See pictures"/>
                                 <connections>
                                     <segue destination="DNZ-QT-wYo" kind="show" id="Cw0-Kz-MRp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt5-B1-aWI">
-                                <rect key="frame" x="16" y="590" width="358" height="20.333333333333371"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2023-03-21 17.12.16" highlightedImage="2023-03-21 17.12.16" translatesAutoresizingMaskIntoConstraints="NO" id="gGI-x0-ixD">
+                                <rect key="frame" x="75" y="450.33333333333326" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="358" id="oJW-m2-AAk"/>
+                                    <constraint firstAttribute="width" constant="240" id="Qc5-f1-U1U"/>
+                                    <constraint firstAttribute="height" constant="128" id="U9V-qW-Gni"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt5-B1-aWI">
+                                <rect key="frame" x="16" y="608.33333333333337" width="358" height="20.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="358" id="oJW-m2-AAk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -175,11 +182,13 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3In-Bo-FlL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.82427189625850339" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HaV-RE-9Wn" firstAttribute="top" secondItem="kt5-B1-aWI" secondAttribute="bottom" constant="48.329999999999998" id="HMf-fo-jPz"/>
-                            <constraint firstItem="kt5-B1-aWI" firstAttribute="leading" secondItem="3In-Bo-FlL" secondAttribute="leading" constant="16" id="KWh-ej-p0V"/>
-                            <constraint firstItem="3In-Bo-FlL" firstAttribute="trailing" secondItem="kt5-B1-aWI" secondAttribute="trailing" constant="16" id="hgc-ub-3Gr"/>
+                            <constraint firstItem="HaV-RE-9Wn" firstAttribute="top" secondItem="kt5-B1-aWI" secondAttribute="bottom" constant="30" id="7ML-hA-KA8"/>
+                            <constraint firstItem="3In-Bo-FlL" firstAttribute="trailing" secondItem="kt5-B1-aWI" secondAttribute="trailing" constant="16" id="CLM-tq-xUa"/>
+                            <constraint firstItem="kt5-B1-aWI" firstAttribute="leading" secondItem="3In-Bo-FlL" secondAttribute="leading" constant="16" id="HEL-64-N9c"/>
+                            <constraint firstItem="gGI-x0-ixD" firstAttribute="centerX" secondItem="NqL-cE-PEF" secondAttribute="centerX" id="L9s-20-Gdv"/>
+                            <constraint firstItem="kt5-B1-aWI" firstAttribute="top" secondItem="gGI-x0-ixD" secondAttribute="bottom" constant="30" id="TXu-81-7Nh"/>
                             <constraint firstItem="3In-Bo-FlL" firstAttribute="bottom" secondItem="HaV-RE-9Wn" secondAttribute="bottom" constant="68" id="l2o-cx-AKD"/>
                             <constraint firstItem="HaV-RE-9Wn" firstAttribute="centerX" secondItem="NqL-cE-PEF" secondAttribute="centerX" id="sP0-zs-soy"/>
                         </constraints>
@@ -200,14 +209,25 @@
                     <view key="view" contentMode="scaleToFill" id="YaT-Ta-Xf8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundApp" translatesAutoresizingMaskIntoConstraints="NO" id="qCg-Cm-kjy">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sMu-cb-WPT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qCg-Cm-kjy" secondAttribute="bottom" id="MH0-wM-WTL"/>
+                            <constraint firstItem="qCg-Cm-kjy" firstAttribute="top" secondItem="YaT-Ta-Xf8" secondAttribute="top" id="Vlc-LT-xTR"/>
+                            <constraint firstItem="qCg-Cm-kjy" firstAttribute="leading" secondItem="sMu-cb-WPT" secondAttribute="leading" id="mPh-2z-Do7"/>
+                            <constraint firstItem="qCg-Cm-kjy" firstAttribute="trailing" secondItem="sMu-cb-WPT" secondAttribute="trailing" id="t6N-zh-jRI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lEw-j6-wVL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2Y-Fd-C2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2880" y="1565"/>
+            <point key="canvasLocation" x="2880" y="1563.3802816901409"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oC1-PN-Ahy">
@@ -238,9 +258,12 @@
                         <imageReference key="image" image="2.circle.fill" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OKf-89-RXk">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="OKf-89-RXk">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -440,6 +463,8 @@
     <resources>
         <image name="1.circle.fill" catalog="system" width="128" height="123"/>
         <image name="2.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="2023-03-21 17.12.16" width="1170" height="874"/>
+        <image name="backgroundApp" width="1125" height="2436"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
