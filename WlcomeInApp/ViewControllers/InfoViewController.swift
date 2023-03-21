@@ -9,11 +9,14 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet var infoAbout: UILabel!
+    
     var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "\(user.person.name) \(user.person.surname)"
+        infoAbout.text = user.person.infoAbout
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
