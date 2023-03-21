@@ -23,18 +23,24 @@ class SettingsViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     @IBOutlet var alphaSlider: UISlider!
     
+    
     //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         colorisedView.layer.cornerRadius = colorisedView.frame.width / 15.5
         slidersSetup()
         toColorTheColorisedView()
+        showAlert()
     }
     
     
     //MARK: - IB Actions
     @IBAction func setButtonPressed() {
         toColorTheSuperView()
+    }
+    
+    @IBAction func questionButtonPressed() {
+        showAlert()
     }
     
     @IBAction func allBlackButtonPressed() {
@@ -45,7 +51,7 @@ class SettingsViewController: UIViewController {
         toColorTheColorisedView()
     }
     
-    @IBAction func allWhiteVuttonPressed() {
+    @IBAction func allWhiteButtonPressed() {
         redSlider.value = 1
         greenSlider.value = 1
         blueSlider.value = 1
@@ -73,20 +79,6 @@ class SettingsViewController: UIViewController {
         toColorTheColorisedView()
     }
     
-    
-    //MARK: - Methods
-    func showAlert(with title: String, and message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        let okAlert = UIAlertAction(title: "OK", style: .default)
-        
-        present(alert, animated: true)
-        alert.addAction(okAlert)
-    }
-
     
     // MARK: - Private methods
     private func slidersSetup() {
@@ -117,3 +109,17 @@ class SettingsViewController: UIViewController {
 }
 
 
+//MARK: Alert method
+extension SettingsViewController {
+    func showAlert(with title: String = "Hi!", and message: String = "Set the view in any color you want and press the Set button to paint the background", textField: UITextField? = nil) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAlert = UIAlertAction(title: "OK", style: .default)
+        
+        present(alert, animated: true)
+        alert.addAction(okAlert)
+    }
+}
