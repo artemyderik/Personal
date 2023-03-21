@@ -11,7 +11,7 @@ class MoreAboutViewController: UIViewController {
 
     var user: User!
     
-    //MARK: OverrideMethods
+    //MARK: Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
