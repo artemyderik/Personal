@@ -15,6 +15,7 @@ class MoreAboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "\(user.person.name)'s works"
+        
     }
 }
