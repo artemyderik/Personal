@@ -24,9 +24,11 @@ final class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeViewController = viewController as? WelcomeViewController {
-                welcomeViewController.usernameAgent = user.person.name
-            } else if viewController is UINavigationController {
-                viewController.title = "About \(user.person.name)"
+                welcomeViewController.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                navigationVC.title = "About \(user.person.name)"
+                guard let infoVC = navigationVC.topViewController as? InfoViewController else { return }
+                infoVC.user = user
             } else if let settingsViewController = viewController as? SettingsViewController {
                 settingsViewController.showAlert(with: "Hi!", and: "Set the view in any color you want and press the Set button to paint the background")
             }
