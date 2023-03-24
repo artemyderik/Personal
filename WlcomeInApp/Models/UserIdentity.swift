@@ -16,4 +16,7 @@ struct Person {
     let name: String
     let surname: String
     let infoAbout: String
+    let firstImage: String
+    let secondImage: String
 }
+

@@ -12,7 +12,7 @@ class InfoViewController: UIViewController {
     
 //MARK: IB Outlest
     @IBOutlet var infoAbout: UILabel!
-    
+    @IBOutlet var photoImage: UIImageView!
     
 //MARK: Properties
     var user: User!
@@ -21,6 +21,7 @@ class InfoViewController: UIViewController {
 //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        photoImage.image = UIImage(named: user.person.firstImage)
         title = "\(user.person.name) \(user.person.surname)"
         infoAbout.text = user.person.infoAbout
     }
