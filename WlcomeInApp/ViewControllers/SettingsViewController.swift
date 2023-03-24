@@ -29,14 +29,14 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         colorisedView.layer.cornerRadius = colorisedView.frame.width / 15.5
         slidersSetup()
-        toColorTheColorisedView()
+        toColorTheBackground(of: colorisedView)
         showAlert()
     }
     
     
     //MARK: - IB Actions
     @IBAction func setButtonPressed() {
-        toColorTheSuperView()
+        toColorTheBackground(of: view)
     }
     
     @IBAction func questionButtonPressed() {
@@ -44,39 +44,31 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func allBlackButtonPressed() {
-        redSlider.value = 0
-        greenSlider.value = 0
-        blueSlider.value = 0
-        alphaSlider.value = 1
-        toColorTheColorisedView()
+        setupAllSlidersColorValue(to: 0)
     }
     
     @IBAction func allWhiteButtonPressed() {
-        redSlider.value = 1
-        greenSlider.value = 1
-        blueSlider.value = 1
-        alphaSlider.value = 1
-        toColorTheColorisedView()
+        setupAllSlidersColorValue(to: 1)
     }
 
     @IBAction func redSpectorChanges() {
         redSliderValue.text = String(format: "%.2f", redSlider.value)
-        toColorTheColorisedView()
+        toColorTheBackground(of: colorisedView)
     }
     
     @IBAction func greenSpectorChanges() {
         greenSliderValue.text = String(format: "%.2f", greenSlider.value)
-        toColorTheColorisedView()
+        toColorTheBackground(of: colorisedView)
     }
     
     @IBAction func blueSpectorChanges() {
         blueSliderValue.text = String(format: "%.2f", blueSlider.value)
-        toColorTheColorisedView()
+        toColorTheBackground(of: colorisedView)
     }
     
     @IBAction func alphaSpectorChanges() {
         alphaSliderValue.text = String(format: "%.2f", alphaSlider.value)
-        toColorTheColorisedView()
+        toColorTheBackground(of: colorisedView)
     }
     
     
@@ -88,8 +80,8 @@ class SettingsViewController: UIViewController {
         alphaSlider.minimumTrackTintColor = UIColor.lightGray
     }
     
-    private func toColorTheColorisedView() {
-        colorisedView.backgroundColor = UIColor(
+    private func toColorTheBackground(of view: UIView) {
+        view.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
@@ -97,13 +89,12 @@ class SettingsViewController: UIViewController {
         )
     }
     
-    private func toColorTheSuperView() {
-        view.backgroundColor =  UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: CGFloat(alphaSlider.value)
-        )
+    private func setupAllSlidersColorValue(to value: Float) {
+        redSlider.value = value
+        greenSlider.value = value
+        blueSlider.value = value
+        alphaSlider.value = 1
+        toColorTheBackground(of: colorisedView)
     }
 
 }
