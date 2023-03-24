@@ -30,8 +30,6 @@ final class LoginViewController: UIViewController {
                 navigationVC.title = "About \(user.person.name)"
                 guard let infoVC = navigationVC.topViewController as? InfoViewController else { return }
                 infoVC.user = user
-            } else if let settingsViewController = viewController as? SettingsViewController {
-                settingsViewController.showAlert(with: "Hi!", and: "Set the view in any color you want and press the Set button to paint the background")
             }
         }
     }
